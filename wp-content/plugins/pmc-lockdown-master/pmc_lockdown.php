@@ -57,7 +57,8 @@ add_filter( 'comments_open', 'pmc_lockdown_close_comments', 99 );
 function pmc_lockdown_admin_notice() {
 	if ( defined('PMC_LOCKDOWN') ) {
 		?><div id="message" class="updated fade">
-			<p><?php printf( __('Site is on maintenance lockdown.  <a href="%s">Settings</a>', PMC_LOCKDOWN_I18N), admin_url('options-reading.php') ); ?></p>
+			<p><?php printf( __('Site is on maintenance lockdown.  <a href="%s">Settings</a>', 
+                                PMC_LOCKDOWN_I18N), admin_url('options-reading.php') ); ?></p>
 		</div><?php
 	}
 }
